@@ -22,7 +22,8 @@
    - [Instalação](#instalacao)    
 - [Licença](#licenca)
 - [Agradecimento](#agradecimento)
-- [Deploy](#deploy) 
+- [Deploy](#deploy)
+- [Changelog](#changelog) 
 
 ## :green_book: Sobre o projeto <a name = "sobre-o-projeto"></a>
 
@@ -172,6 +173,14 @@ O projeto está sob a licença MIT. Para saber mais, acesse o arquivo [LICENÇA]
 
 ---
 
-## :dizzy: Deploy <a name = "deploy"></a>  
+## 📬 Deploy <a name = "deploy"></a>  
 
 [![Deploy no Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/sites/bankist-carla-santos/deploys)
+
+---
+
+## :dizzy: Changelog <a name = "changelog"></a>  
+
+### 1.0.0
+- Lançamento inicial<br>
+28.08.2022
