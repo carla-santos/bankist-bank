@@ -1,0 +1,35 @@
+{
+  "name": "bankist",
+  "version": "1.0.0",
+  "description": "Projeto bankist com Javascript",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "CSS",
+    "SASS",
+    "GULP"
+  ],
+  "author": "Carla Santos",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "> 0.2%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.11",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.6",
+    "sass": "^1.49.0"
+  }
+}

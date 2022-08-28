@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.logout-timer {
+  color: v.$color-tertiary;
+  margin-top: 2rem;
+  text-align: right;
+
+  @include m.d(md) {
+    text-align: center;
+  }
+
+  & .timer {
+    font-weight: 700;
+  }
+}
+
+.btn--logout {
+  grid-column: 1/-1;
+  justify-self: center;
+  background-color: v.$color-secondary-light;
+  border: none;
+  color: inherit;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 1s;
+
+  &:hover {
+    background-color: v.$color-secondary;
+  }
+}

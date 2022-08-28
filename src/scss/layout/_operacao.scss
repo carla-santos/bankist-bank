@@ -1,0 +1,108 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.operacao {
+  border-radius: v.$border-radius;
+  padding: 2.4rem 3.6rem;
+
+  &--transferencia {
+    background: linear-gradient(to right, v.$color-secondary, v.$color-secondary-light);
+  }
+
+  &--emprestimo {
+    background: linear-gradient(to right, v.$color-primary, v.$color-primary-light);
+  }
+
+  &--fechar {
+    background: linear-gradient(to right, v.$color-tertiary, v.$color-tertiary-light);
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+
+    @include m.d(md) {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+
+    @include m.d(sm) {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 15rem 15rem 8rem;
+  grid-template-rows: auto auto;
+  gap: 0.5rem 1rem;
+  align-items: center;
+
+  @include m.d(md) {
+    grid-template-columns: 15rem 15rem 8rem;
+    place-content: center;
+  }
+
+  @include m.d(sm) {
+    grid-template-columns: 10rem 10rem 4rem;
+    place-content: flex-start;
+  }
+
+  &--emprestimo {
+    grid-template-columns: 15rem 15rem;
+
+    @include m.d(sm) {
+      grid-template-columns: 10rem 8rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    place-self: center;
+
+    @include m.d(md) {
+      font-size: 1.8rem;
+    }
+
+    @include m.d(sm) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+
+  &__input {
+    border: none;
+    border-radius: v.$border-radius;
+    background-color: rgba(v.$color-white, 0.4);
+    padding: 0.5rem 1rem;
+    transition: all 0.4s;
+    text-align: center;
+    transition: all 0.4s;
+
+    &:focus {
+      box-shadow: unset;
+      background-color: v.$color-white;
+    }
+  }
+
+  &__btn {
+    border: none;
+    border-radius: v.$border-radius;
+    background-color: v.$color-white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: all 0.4s;
+
+    &:focus {
+      box-shadow: unset;
+      background-color: rgba(v.$color-white, 0.6);
+    }
+
+    &--empres {
+      width: 55%;
+    }
+  }
+}

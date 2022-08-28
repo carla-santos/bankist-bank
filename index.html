@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Bankist</title>
+  <meta name="description" content="Aplicativo para banco Bankist">
+  <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="build/css/main.css" />
+
+  <!-- Script -->
+  <script defer src="/build/js/script.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <p class="header__welcome js-header__welcome">Bem vindo(a), <span>usuário!</span></p>
+    <p class="header__login">Faça o login no formulário abaixo</p>
+  </header>
+
+  <nav class="nav container">
+    <a href="/">
+      <img class="nav__img" src="img/icon.png" alt="Logo da Bankist" width="53" height="53">
+    </a>
+    <h1 class="nav__heading">Bankist</h1>
+
+    <form action="#" class="nav__form">
+      <div class="form__campos">
+        <label for="usuario-login">Usuário</label>
+        <input id="usuario-login" type="text" class="js-nav__input--usuario" autocomplete="username" placeholder="Usuário" required>
+      </div>
+
+      <div class="form__campos">
+        <label for="pin-login">Pin</label>
+        <input id="pin-login" type="password" class="js-nav__input--pin" autocomplete="current-password" placeholder="Pin" maxlength="4" required>
+      </div>
+
+      <div class="form__campos">
+        <button class="js-form__button">Entrar</button>
+      </div>
+    </form>
+  </nav>
+
+  <main class="app hidden js-app">
+    <!-- Balanço -->
+    <section class="balanco">
+      <div class="balanco__info">
+        <h1 class="balanco__titulo">Saldo atual</h1>
+        <p class="balanco__data">
+          <span class="data">05/03/2037</span>
+        </p>
+      </div>
+      <p class="balanco__valor js-balanco__valor">0000</p>
+    </section>
+
+    <!-- Movimentos na conta -->
+    <section class="movimentos js-movimentos">
+      <div class="movimentos__row">
+        <div class="movimentos__tipo movimentos__tipo--deposito">
+          2 depósitos
+        </div>
+        <div class="movimentos__data">3 dias atrás</div>
+        <div class="movimentos__valor">4.000,00</div>
+      </div>
+
+      <div class="movimentos__row">
+        <div class="movimentos__tipo movimentos__tipo--saque">
+          1 saque
+        </div>
+        <div class="movimentos__data">24/01/2037</div>
+        <div class="movimentos__valor">-378,00</div>
+      </div>
+    </section>
+
+    <section class="sumario">
+      <div class="sumario__box">
+        <h2 class="sumario__title">Depósitos</h2>
+        <p class="sumario__valor js-sumario__valor--deposito">0000</p>
+      </div>
+
+      <div class="sumario__box">
+        <h2 class="sumario__title">Saques</h2>
+        <p class="sumario__valor js-sumario__valor--saque">0000</p>
+      </div>
+
+      <div class="sumario__box">
+        <h2 class="sumario__title">Juros</h2>
+        <p class="sumario__valor js-sumario__valor--juros">0000</p>
+      </div>
+
+      <button class="btn--sort js-btn--sort">&DownArrow; Ordenar</button>
+    </section>
+
+    <!-- Transferências -->
+    <section class="operacao operacao--transferencia">
+      <h2 class="operacao__title">Transferir dinheiro</h2>
+      <form action="#" class="form form--transferencia">
+        <input type="text" class="form__input js-form__input--para" id="para">
+        <input type="number" class="form__input js-form__input--montante" id="montante">
+        <button class="form__btn js-form__btn--transf">&rarr;</button>
+        <label for="para" class="form__label">Transferir para</label>
+        <label for="montante" class="form__label">Montante</label>
+      </form>
+    </section>
+
+    <!-- Empréstimo -->
+    <section class="operacao operacao--emprestimo">
+      <h2 class="operacao__title">Solicitar empréstimo</h2>
+      <form action="#" class="form form--emprestimo">
+        <input type="number" class="form__input js-form__input--empres" id="mont">
+        <button class="form__btn js-form__btn--empres">&rarr;</button>
+        <label for="mont" class="form__label">Montante</label>
+      </form>
+    </section>
+
+    <!-- Encerra conta -->
+    <section class="operacao operacao--fechar">
+      <h2 class="operacao__title">Fechar conta</h2>
+      <form action="#" class="form form--fechar">
+        <input type="text" class="form__input js-form__input--usuario" autocomplete="username" id="usuario">
+        <input type="password" class="form__input js-form__input--pin" autocomplete="current-password" maxlength="6" id="pin">
+        <button class="form__btn js-form__btn--close">&rarr;</button>
+        <label for="usuario" class="form__label">Confirmar usuário</label>
+        <label for="pin" class="form__label">Confirmar Pin</label>
+      </form>
+    </section>
+
+    <p class="logout-timer">
+      Você será desconectado às <span class="timer">05:00</span>
+    </p>
+
+    <button class="btn--logout js-btn--logout">Encerrar sessão</button>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por <span>Carla Santos</span>
+    </p>
+    <a href="https://github.com/carla-santos" target="_blank" rel="noopener noreferrer">
+      <img class="github" src="img/github.svg" alt="Github">
+    </a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sumario {
+  grid-row: 5 / 6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+
+  @include m.d(md) {
+    justify-content: space-around;
+  }
+
+  &__box {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    @include m.d(lg) {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+
+    @include m.d(md) {
+      font-size: 2.4rem;
+    }
+
+    @include m.d(sm) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__valor {
+    font-size: 1.8rem;
+
+    @include m.d(md) {
+      font-size: 2rem;
+    }
+
+    @include m.d(sm) {
+      font-size: 1.4rem;
+    }
+
+    &--deposito {
+      color: v.$color-primary;
+    }
+
+    &--saque {
+      color: v.$color-tertiary;
+    }
+  }
+}
+
+.btn--sort {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+
+  @include m.d(md) {
+    font-size: 2rem;
+  }
+
+  @include m.d(sm) {
+    align-self: flex-start;
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    color: v.$color-grey-dark-1;
+  }
+}

@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.balanco {
+  grid-column: 1/ -1;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include m.d(md) {
+    justify-content: space-around;
+  }
+
+  @include m.d(sm) {
+    justify-content: flex-start;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  &__titulo {
+    font-size: 2.8rem;
+
+    @include m.d(sm) {
+      font-size: 2rem;
+    }
+  }
+
+  &__data {
+    color: v.$color-tertiary;
+    font-weight: 500;
+
+    @include m.d(sm) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__valor {
+    font-size: 3.6rem;
+    align-self: flex-start;
+
+    @include m.d(sm) {
+      font-size: 2.4rem;
+      margin-left: 4rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.app {
+  max-width: 120rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 16rem) auto;
+  gap: 2rem;
+  transition: all 1s;
+
+  @include m.d(md) {
+    grid-template-columns: 70rem;
+    place-content: center;
+  }
+
+  @include m.d(sm) {
+    grid-template-columns: 50rem;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.hidden {
+  display: none;
+}

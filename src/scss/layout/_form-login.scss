@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nav {
+  background-color: v.$color-blue;
+  padding: 3.6rem 0;
+  border-radius: v.$border-radius;
+  box-shadow: 0 5px 15px 0 rgba(#000, 0.6);
+
+  &.container {
+    max-width: 48rem;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+  }
+
+  &__img {
+    margin: 0 auto 1rem auto;
+  }
+
+  &__heading {
+    color: v.$color-white;
+    font-family: v.$font-family-heading;
+    font-size: 3.2rem;
+    margin-bottom: 3.6rem;
+    text-align: center;
+    letter-spacing: 1.6px;
+  }
+
+  &__form {
+    padding: 0 3.6rem;
+  }
+}
+
+.form__campos {
+  &:last-child {
+    margin-top: 2rem;
+  }
+
+  label {
+    color: v.$color-white;
+    font-size: 2rem;
+    display: block;
+    margin: 0.8rem 0;
+  }
+
+  & input {
+    background-color: v.$color-grey-dark-1;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: v.$border-radius;
+    border: 3px solid currentColor;
+    padding: 1rem;
+    width: 96%;
+
+    &::placeholder {
+      color: v.$color-blue;
+    }
+
+    &:focus {
+      background-color: v.$color-white;
+    }
+  }
+
+  & button {
+    border: 3px solid v.$color-blue;
+    border-radius: v.$border-radius;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem;
+    width: 96%;
+    transition: all 0.3s ease-in;
+
+    &:hover,
+    &:active {
+      background-color: v.$color-secondary-light;
+    }
+  }
+}
