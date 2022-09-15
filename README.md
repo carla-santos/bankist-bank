@@ -138,10 +138,10 @@ Siga as instruções abaixo para obter uma cópia local:
 ```bash
 
 # Clone este repositório.
-$ git@github.com:carla-santos/descubra-numero.git
+$ https://github.com/carla-santos/bankist-bank.git
 
 # Acesse a pasta do projeto no seu terminal/cmd/(Git bash).
-$ cd descubra-numero
+$ cd bankist-bank
 
 # Instale as dependências.
 $ npm install
